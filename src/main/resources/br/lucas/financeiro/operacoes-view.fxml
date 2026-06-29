@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="450.0" prefWidth="1000.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.lucas.financeiro.controller.OperacoesController">
+    <padding> <javafx.geometry.Insets bottom="20" left="20" right="20" top="20" /> </padding>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="btnNav" onAction="#irParaMenu" styleClass="btn-nav" text="Menu Principal" />
+        <Button onAction="#irParaClientes" styleClass="btn-nav" text="Clientes (CRUD)" />
+        <Button onAction="#irParaSimulador" styleClass="btn-nav" text="Simulador" />
+    </HBox>
+
+    <Label styleClass="titulo" text="Operações Bancárias" />
+
+    <TitledPane collapsible="false" text="1. Acesso à Conta">
+        <HBox alignment="CENTER_LEFT" spacing="15.0">
+            <TextField fx:id="txtNumeroConta" promptText="Nº da Conta" />
+            <Button onAction="#handleBuscarConta" text="Buscar" />
+            <Label fx:id="lblTitular" style="-fx-font-size: 14px;" text="Titular: -" />
+            <Label fx:id="lblSaldo" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #27ae60;" text="Saldo: R$ 0.00" />
+        </HBox>
+    </TitledPane>
+
+    <TitledPane collapsible="false" text="2. Ações Financeiras">
+        <HBox alignment="CENTER_LEFT" spacing="15.0">
+            <TextField fx:id="txtValor" promptText="R$ Valor" />
+            <Button onAction="#handleDepositar" style="-fx-background-color: #2ecc71;" text="Depositar" />
+            <Button onAction="#handleSacar" style="-fx-background-color: #e74c3c;" text="Sacar" />
+            <Label />
+        </HBox>
+    </TitledPane>
+   <TitledPane collapsible="false" text="3. Tranferências">
+      <content>
+         <HBox alignment="CENTER_LEFT" spacing="15.0">
+            <children>
+               <TextField fx:id="txtValorTransferencia" promptText="R$ Valor" />
+               <TextField fx:id="txtContaDestino" prefHeight="32.0" prefWidth="137.0" promptText="Nº Conta Destino" />
+               <Button onAction="#handleTransferir" style="-fx-background-color: #f39c12;" text="Transferir" />
+            </children>
+         </HBox>
+      </content>
+   </TitledPane>
+</VBox>

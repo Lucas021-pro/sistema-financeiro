@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="800.0" spacing="15.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.lucas.financeiro.controller.SimuladorController">
+    <padding> <javafx.geometry.Insets bottom="20" left="20" right="20" top="20" /> </padding>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="btnNav" onAction="#irParaMenu" styleClass="btn-nav" text="Menu Principal" />
+        <Button onAction="#irParaClientes" styleClass="btn-nav" text="Clientes" />
+        <Button onAction="#irParaOperacoes" styleClass="btn-nav" text="Operações" />
+    </HBox>
+
+    <Label styleClass="titulo" text="Matriz de Amortização (SAC / PRICE)" />
+
+    <HBox alignment="CENTER" spacing="15">
+        <TextField fx:id="txtValor" promptText="Valor Financiado" />
+        <TextField fx:id="txtTaxa" promptText="Taxa % a.m." />
+        <TextField fx:id="txtParcelas" promptText="Nº Parcelas" />
+        <ComboBox fx:id="cbSistema" promptText="Sistema" />
+        <Button onAction="#handleSimular" style="-fx-background-color: #9b59b6;" text="Gerar Matriz" />
+    </HBox>
+
+    <TableView fx:id="tableSimulacao" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colMes" prefWidth="80" text="Mês" />
+            <TableColumn fx:id="colAmortizacao" prefWidth="150" text="Amortização" />
+            <TableColumn fx:id="colJuros" prefWidth="177.0" text="Juros" />
+            <TableColumn fx:id="colParcela" prefWidth="171.0" text="Parcela Total" />
+            <TableColumn fx:id="colSaldo" prefWidth="176.0" text="Saldo Devedor" />
+        </columns>
+    </TableView>
+</VBox>
