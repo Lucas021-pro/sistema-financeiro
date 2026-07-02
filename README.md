@@ -1,4 +1,4 @@
-# 🏦 Sistema de Gestão Financeira (JavaFX)
+# Sistema de Gestão Financeira (JavaFX)
 
 > Uma aplicação desktop robusta para gestão bancária e simulação financeira, construída com foco em **Arquitetura de Software**, **Design Patterns** e **Boas Práticas de Orientação a Objetos**.
 
