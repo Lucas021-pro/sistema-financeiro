@@ -51,4 +51,4 @@ O núcleo do sistema está coberto por testes unitários focados nas regras de n
 
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git)
+   git clone [https://github.com/Lucas021-pro/sistema-financeiro.git](https://github.com/Lucas021-pro/sistema-financeiro.git)
